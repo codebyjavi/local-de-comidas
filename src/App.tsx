@@ -1,5 +1,7 @@
 import MenuItem from "./components/MenuItem"
 import OrderContents from "./components/OrderContents"
+import { OrderTotals } from "./components/OrderTotals"
+import TipPercentageForm from "./components/TipPercentageForm" 
 import { menuItems } from "./data/db"
 import useOrder from "./hooks/useOrder"
 
@@ -9,7 +11,7 @@ function App() {
 
   return (
     <>
-      <header className="bg-blue-500 text-white font-bold text-center text-4xl py-6">
+      <header className="bg-blue-500 text-white font-bold text-center text-5xl py-6 md:py-10">
         <h1>Local de comidas</h1>
         
       </header>
@@ -34,6 +36,13 @@ function App() {
             removeItem={removeItem}
           />
 
+          <TipPercentageForm
+          
+          />
+
+          <OrderTotals
+          order={order}
+          />
         </div>
       </main>
     </>

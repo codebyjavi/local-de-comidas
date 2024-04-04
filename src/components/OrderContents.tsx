@@ -1,17 +1,17 @@
 import { formatCurrency } from "../helpers"
-import { OrderItem } from "../types"
+import { MenuItem, OrderItem } from "../types"
 
 type OrderContentsProps = {
     order: OrderItem[]
-    removeItem: (id: OrderItem['id']) => void
+    removeItem: (id: MenuItem['id']) => void
 }
 
-function OrderContents({ order, removeItem } : OrderContentsProps) {
+export default function OrderContents({ order, removeItem } : OrderContentsProps) {
   return (
     <div>
         <h2 className="mb-10 text-4xl font-bold">Consumo</h2>
         {order.length === 0 ? 
-        <p>La orden está vacía</p> 
+        <h3 className="text-xl">La orden está vacía.</h3> 
         : (<div className="space-y-3">
 
             {order.map( item => (
@@ -32,5 +32,3 @@ function OrderContents({ order, removeItem } : OrderContentsProps) {
     </div>
   )
 }
-
-export default OrderContents

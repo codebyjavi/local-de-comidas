@@ -6,7 +6,7 @@ type MenuItemProps = {
    addItem: (item: MenuItem) => void
 }
 
-function MenuItem({item, addItem} : MenuItemProps) {
+export default function MenuItem({item, addItem} : MenuItemProps) {
   return (
     <button className="flex justify-between w-full p-4 rounded-md border-2 border-blue-400 hover:bg-blue-200"
     onClick={() => addItem(item)}
@@ -16,5 +16,3 @@ function MenuItem({item, addItem} : MenuItemProps) {
     </button>
   )
 }
-
-export default MenuItem
