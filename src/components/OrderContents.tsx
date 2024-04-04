@@ -11,7 +11,7 @@ export default function OrderContents({ order, removeItem } : OrderContentsProps
     <div>
         <h2 className="mb-10 text-4xl font-bold">Consumo</h2>
         {order.length === 0 ? 
-        <h3 className="text-xl">La orden está vacía.</h3> 
+        <h3 className="text-2xl">La orden está vacía.</h3> 
         : (<div className="space-y-3">
 
             {order.map( item => (
