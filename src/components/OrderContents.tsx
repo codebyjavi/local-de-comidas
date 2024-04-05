@@ -10,10 +10,7 @@ export default function OrderContents({ order, removeItem } : OrderContentsProps
   return (
     <div>
         <h2 className="mb-10 text-4xl font-bold">Consumo</h2>
-        {order.length === 0 ? 
-        <h3 className="text-2xl">La orden está vacía.</h3> 
-        : (<div className="space-y-3">
-
+        <div className="space-y-3">
             {order.map( item => (
                 <div key={item.id} className="flex justify-between items-center w-full p-2 border-b-2">
                     <div>
@@ -27,8 +24,7 @@ export default function OrderContents({ order, removeItem } : OrderContentsProps
                     </button>
                 </div>
             ))}
-            </div>
-        )}
+        </div>
     </div>
   )
 }
