@@ -2,7 +2,7 @@
 import type { MenuItem } from "../types"
 
 type MenuItemProps = {
-   item: MenuItem
+   item: MenuItem,
    addItem: (item: MenuItem) => void
 }
 

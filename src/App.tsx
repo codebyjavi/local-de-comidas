@@ -11,7 +11,7 @@ function App() {
 
   return (
     <>
-      <header className="bg-blue-500 text-white font-bold text-center text-5xl py-6 md:py-10">
+      <header className="bg-blue-500 text-white font-bold text-center text-3xl md:text-5xl py-6 md:py-10">
         <h1>Local de comidas</h1>
         
       </header>
