@@ -33,7 +33,6 @@ export const orderReducer = (
             const newItem : OrderItem = {...action.payload.item, quantity: 1}
             updatedOrder = [...state.order, newItem] 
         }
-        console.log('xd');
                 
         return {
             ...state,
