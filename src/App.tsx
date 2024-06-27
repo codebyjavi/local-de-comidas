@@ -9,7 +9,7 @@ import { initialState, orderReducer } from "./reducers/order-reducer"
 
 function App() {
 
-  const { order, tip, setTip, removeItem, placeOrder } = useOrder()
+  const { tip, setTip, placeOrder } = useOrder()
 
   const [state, dispatch] = useReducer(orderReducer, initialState)
 
@@ -26,9 +26,9 @@ function App() {
           <div className="md:text-xl space-y-2">
             {menuItems.map(item => 
                 <MenuItem
-                key={item.id}
-                item={item}
-                dispatch={dispatch}
+                  key={item.id}
+                  item={item}
+                  dispatch={dispatch}
                 />
             )}
           </div>
@@ -39,7 +39,7 @@ function App() {
           <>
             <OrderContents
               order={state.order}
-              removeItem={removeItem}
+              dispatch={dispatch}
             />
 
             <TipPercentageForm
