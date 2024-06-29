@@ -41,7 +41,7 @@ export const orderReducer = (
     }
 
     if(action.type === 'remove-item') {
-        
+
         const order = state.order.filter(item => item.id !== action.payload.id)
 
         return {
@@ -57,8 +57,10 @@ export const orderReducer = (
     }
     
     if(action.type === 'add-tip') {
+
         return {
-            ...state
+            ...state,
+            tip: action.payload.quantity
         }
     }
         
